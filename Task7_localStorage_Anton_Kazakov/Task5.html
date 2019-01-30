@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+        	<meta charset="utf-8">
+        	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        	<title>Pizzeria</title>
+        	<link rel="stylesheet" type="text/css" href="style/style.css">
+        	<link rel="shortcut icon" type="image/png" href="img/pizza.png"/>
+        </head>
+        <body>
+			<header class="header">
+				<h1>
+					<a href="#" title="Pizza Logo">
+						<img src="img/logo.png" alt="Pizza Logo" class="img_header" width="150" height="100">
+					</a>
+				</h1>
+				<nav class="main-menu" role="navigation">
+              		<ul role="menubar" class="menu">
+                		<li id="menu-item">
+                  			<a href="#aboutus" role="menuitem" class="m-text">
+                    			<span class="menu-text">О нас</span>
+                 			</a>
+                		</li>
+                		<li id="menu-item">
+                  			<a href="#menu" role="menuitem" class="m-text">
+                    			<span class="menu-text">Наше меню</span>
+                 			</a>
+                		</li>
+                		<li id="menu-item">
+                  			<a href="#testimonials" role="menuitem" class="m-text">
+                    			<span class="menu-text">Отзывы</span>
+                 			</a>
+                		</li>
+                		<li id="menu-item">
+                  			<a href="#shipping" role="menuitem" class="m-text">
+                    			<span class="menu-text">Доставка и оплата</span>
+                 			</a>
+                		</li>
+                        <span class="cart-wrapper">
+                            <div id="count">0</div>
+                            <img src="img/cart.png" alt="Cart" width="20" height="20">
+                            <span>Корзина</span>
+                        </span>
+                	</ul>
+                </nav>
+			</header>
+			<section class="our-menu">
+				<h1 class="menu-head">
+					Наше меню
+				</h1>
+				<input type="button" class="btn" onclick="tablegrid()" value="Просмотр в виде сетки"/>
+				<input type="button" class="btn" onclick="listitem()" value="Просмотр в виде списка"/>
+        <input type="button" class="btn btn-3" onclick="sortprice()" value="Сортировка по цене"/>
+        <input type="button" class="btn btn-4" onclick="sortcals()" value="Сортировка по калориям"/>
+        <div class="form form-1">
+                <p>Поиск по ингредиентам</p><br>
+                  <input type="text" id="search"/><br>
+                  <span>
+                    <button type="submit" name="ingr" class="btn search-btn" onclick="search()">Поиск</button><br>
+                  </span>
+        </div> 
+        <div class="form form-2">
+            <p>Добавить новый элемент</p>
+            <input type="text" id="namef" placeholder="Название"/><br>
+            <input type="checkbox" id="cheese" value="Сыр"/>
+            <label id="cheese_lb">Сыр</label><br>
+            <input type="checkbox" id="ham" value="Ветчина"/>
+            <label id="ham_lb">Ветчина</label><br>
+            <input type="checkbox" id="tomatoes" value="Помидоры"/>
+            <label id="tomatoes_lb">Помидоры</label><br>
+            <input type="checkbox" id="mushr" value="Грибы"/>
+            <label id="mushr_lb">Грибы</label><br>
+            <input type="checkbox" id="pepper" value="Перец"/>
+            <label id="pepper_lb">Перец</label><br>
+            <button type="submit" name="newel" class="btn search-btn" onclick="addnew()">Добавить</button>
+        </div>
+			<div id="wrapper">
+
+			</div>
+			<div id="wrapper-list">
+				<ul id="menu-list">
+					
+				</ul>
+			</div>
+			</section>
+        	<script src="script/script.js"></script>
+		</body>
+</html>
